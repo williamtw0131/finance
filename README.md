@@ -10,3 +10,6 @@ You are welcome to play with this project and report any bugs or feedback.
 Here is my contact: ie4t21@gmail.com
 
 2018/11/07
+
+Here is some extra info about this project:https://docs.cs50.net/2018/fall/psets/8/finance/finance.html
+Great thanks to all the staff of Harvard CS50.
