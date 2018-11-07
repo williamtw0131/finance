@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    User profile
+{% endblock %}
+
+{% block main %}
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Symbol</th>
+                    <th>Share</th>
+                    <th>Price (current)</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <td colspan="4"></td>
+                    <td>Total Assets: {{  assets  }}</td>
+                </tr>
+            </tfoot>
+            <tbody>
+                {% for symbol in userstocklist %}
+
+                <tr>
+                    <td>{{  symbolname[symbol]  }}</td>
+                    <td>{{  symbol  }}</td>
+                    <td>{{  symbolshare[symbol]  }}</td>
+                    <td>{{  symbolprice[symbol]  }}</td>
+                    <td>{{  sharesvalue[symbol]  }}</td>
+                </tr>
+                {% endfor %}
+
+                <tr>
+                    <td colspan="4"></td>
+                    <td colspan="4">Cash: {{  usercash  }}</td>
+                </tr>
+            </tbody>
+
+{% endblock %}

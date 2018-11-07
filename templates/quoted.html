@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <form action="/quote" method="post">
+        <h2>
+        A share of {{  quote["name"]  }}({{  symbol  }}) costs {{  price  }}.
+        </h2>
+    </form>
+{% endblock %}

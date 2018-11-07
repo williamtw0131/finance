@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    User profile
+{% endblock %}
+
+{% block main %}
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Symbol</th>
+                    <th>Share</th>
+                    <th>Price</th>
+                    <th>Transacted</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                {%for i in data %}
+                <tr>
+                    <td>{{  i["symbol"]  }}</td>
+                    <td>{{  i["shares"]  }}</td>
+                    <td>${{  i["inprice"]  }}</td>
+                    <td>{{  i["time"]  }}</td>
+
+                </tr>
+                {% endfor %}
+
+            </tbody>
+
+{% endblock %}
